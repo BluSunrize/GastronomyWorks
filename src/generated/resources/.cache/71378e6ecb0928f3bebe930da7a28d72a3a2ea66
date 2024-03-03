@@ -1,5 +1,7 @@
-// 1.20.4	2024-03-03T18:40:12.9822549	Item Models: gastronomyworks
+// 1.20.4	2024-03-03T22:21:28.004287	Item Models: gastronomyworks
 c3004b809a6ff1fcdcce2b0161428ae2f3311e2c assets/gastronomyworks/models/item/baguette.json
 f55a876d129ba17547ae9cd463da15fa13e022eb assets/gastronomyworks/models/item/baguette_raw.json
+9953b1f4e05e4a55b4980f85274ba42cfb6bce68 assets/gastronomyworks/models/item/bread_raw.json
 010d78d1a1e86b6cb982d01feadbdeeb1bfcb705 assets/gastronomyworks/models/item/dough_bucket.json
 3edeb0fb4a9f7360f1a84f1f1ef83d4929f9dbfa assets/gastronomyworks/models/item/flour.json
+ece191bbc416e2c705bc87b1656cd49d841b020b assets/gastronomyworks/models/item/loaf_pan.json

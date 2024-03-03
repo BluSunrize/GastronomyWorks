@@ -60,6 +60,14 @@ public class GWRegistration
 		public static final DeferredItem<Item> FLOUR = makeItem("flour", new Item.Properties());
 		public static final BakedGood BAGUETTE = BakedGood.make("baguette", 5, 0.75f);
 
+		public static final BakedGood BREAD = new BakedGood(
+				makeItem("bread_raw", new Properties()),
+				net.minecraft.world.item.Items.BREAD
+		);
+
+
+		public static final DeferredItem<Item> LOAF_PAN = makeItem("loaf_pan", new Item.Properties().stacksTo(1));
+
 		private static void init(IEventBus modEventBus)
 		{
 			REGISTER.register(modEventBus);

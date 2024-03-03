@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:dough"
+  },
+  "input": {
+    "item": "gastronomyworks:loaf_pan"
+  },
+  "results": [
+    {
+      "item": "gastronomyworks:bread_raw"
+    },
+    {
+      "item": "gastronomyworks:loaf_pan"
+    }
+  ]
+}
