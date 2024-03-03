@@ -2,6 +2,7 @@ package blusunrize.gastronomyworks;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
@@ -34,13 +35,13 @@ public class GWRegistration
 {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GastronomyWorks.MODID);
 
-//	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = CREATIVE_TABS.register("tab", () -> CreativeModeTab.builder()
-//			.title(Component.translatable("itemGroup."+GastronomyWorks.MODID))
-//			.withTabsBefore(CreativeModeTabs.COMBAT)
-//			.icon(() -> Items.BAGUETTE.get().getDefaultInstance())
-//			.displayItems((parameters, output) -> {
-//				output.accept(Items.BAGUETTE.get());
-//			}).build());
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = CREATIVE_TABS.register("tab", () -> CreativeModeTab.builder()
+			.title(Component.translatable("itemGroup."+GastronomyWorks.MODID))
+			.withTabsBefore(CreativeModeTabs.COMBAT)
+			.icon(() -> Items.BAGUETTE.raw().asItem().getDefaultInstance())
+			.displayItems((parameters, output) -> output.acceptAll(Items.BASIC_ITEMS.stream().map(deferred -> deferred.asItem().getDefaultInstance()).collect(Collectors.toList())))
+			.build()
+	);
 
 	public static class Blocks
 	{
@@ -200,9 +201,8 @@ public class GWRegistration
 	static void addCreative(BuildCreativeModeTabContentsEvent event)
 	{
 		if(event.getTabKey()==CreativeModeTabs.FOOD_AND_DRINKS)
-			event.acceptAll(Items.BASIC_ITEMS.stream().map(itemDeferredItem -> new ItemStack(itemDeferredItem.asItem())).collect(Collectors.toList()));
+			event.acceptAll(Items.BAKED_GOODS.stream().map(bakedGood -> bakedGood.baked().asItem().getDefaultInstance()).collect(Collectors.toList()));
 		if(event.getTabKey()==CreativeModeTabs.INGREDIENTS)
-			event.acceptAll(Fluids.ALL_FLUIDS.stream().map(fluidEntry -> new ItemStack(fluidEntry.bucket.asItem())).collect(Collectors.toList()));
-
+			event.acceptAll(Fluids.ALL_FLUIDS.stream().map(fluidEntry -> fluidEntry.bucket.asItem().getDefaultInstance()).collect(Collectors.toList()));
 	}
 }

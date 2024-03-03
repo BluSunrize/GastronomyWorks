@@ -2,6 +2,7 @@
   "language": "English",
   "language.code": "en_us",
   "language.region": "United States",
+  "itemGroup.gastronomyworks": "Gastronomy Works",
   "fluid_type.gastronomyworks.dough": "Dough",
   "item.gastronomyworks.dough_bucket": "Bucket of Dough",
   "item.gastronomyworks.flour": "Flour",
