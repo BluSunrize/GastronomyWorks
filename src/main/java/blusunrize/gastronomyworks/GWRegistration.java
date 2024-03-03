@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.neoforged.bus.api.IEventBus;
@@ -53,13 +54,11 @@ public class GWRegistration
 
 	public static class Items
 	{
-		private static final List<DeferredItem<Item>> BASIC_ITEMS = new ArrayList<>();
+		public static final List<DeferredItem<Item>> BASIC_ITEMS = new ArrayList<>();
+		public static final List<BakedGood> BAKED_GOODS = new ArrayList<>();
 		public static final DeferredRegister.Items REGISTER = DeferredRegister.createItems(GastronomyWorks.MODID);
 		public static final DeferredItem<Item> FLOUR = makeItem("flour", new Item.Properties());
-		public static final DeferredItem<Item> BAGUETTE = makeItem("baguette",
-				new Item.Properties()
-						.food(new FoodProperties.Builder().nutrition(5).saturationMod(0.75F).build())
-		);
+		public static final BakedGood BAGUETTE = BakedGood.make("baguette", 5, 0.75f);
 
 		private static void init(IEventBus modEventBus)
 		{
@@ -71,6 +70,22 @@ public class GWRegistration
 			DeferredItem<Item> deferredItem = REGISTER.registerSimpleItem(name, properties);
 			BASIC_ITEMS.add(deferredItem);
 			return deferredItem;
+		}
+
+		public record BakedGood(ItemLike raw, ItemLike baked)
+		{
+			public BakedGood
+			{
+				BAKED_GOODS.add(this);
+			}
+
+			public static BakedGood make(String name, int nutrition, float saturation)
+			{
+				return new BakedGood(
+						makeItem(name+"_raw", new Properties()),
+						makeItem(name, new Properties().food(new FoodProperties.Builder().nutrition(nutrition).saturationMod(saturation).build()))
+				);
+			}
 		}
 	}
 

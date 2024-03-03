@@ -1,4 +1,8 @@
-// 1.20.4	2024-03-03T13:52:41.2305059	Recipes
-48294671b6e5245480bd124ab4d84b32e683cf30 data/gastronomyworks/recipes/bottling/baguette.json
+// 1.20.4	2024-03-03T18:40:12.9832556	Recipes
+177fd69b82e00047cd5c0f362ce0e4739607f20c data/gastronomyworks/advancements/recipes/food/cooking/baguette.json
+b65b3a50cadf6e263518fd2bf6f6497afdb230e7 data/gastronomyworks/advancements/recipes/food/cooking/baguette_from_smoking.json
+9f75f9edb4baf110b99453940672daefedfbb2c8 data/gastronomyworks/recipes/bottling/baguette.json
+9c8b01e4ce85a01b363c193f9e50ee2855486d53 data/gastronomyworks/recipes/cooking/baguette.json
+76ab6c90433a92cff862dd123964759e020bf90a data/gastronomyworks/recipes/cooking/baguette_from_smoking.json
 4e00ebcbc679c21d9d77cef138e4888124823732 data/gastronomyworks/recipes/crusher/flour.json
 c3940388542c6e70e4131269fb93efb67045bfb3 data/gastronomyworks/recipes/mixer/dough.json

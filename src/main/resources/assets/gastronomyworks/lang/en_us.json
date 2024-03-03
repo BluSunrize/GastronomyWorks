@@ -5,5 +5,6 @@
   "fluid_type.gastronomyworks.dough": "Dough",
   "item.gastronomyworks.dough_bucket": "Bucket of Dough",
   "item.gastronomyworks.flour": "Flour",
-  "item.gastronomyworks.baguette": "Baguette"
+  "item.gastronomyworks.baguette": "Baguette",
+  "item.gastronomyworks.baguette_raw": "Raw Baguette"
 }
