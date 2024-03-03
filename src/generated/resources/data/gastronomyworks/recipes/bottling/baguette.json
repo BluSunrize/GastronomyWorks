@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:dough"
+  },
+  "input": {
+    "item": "immersiveengineering:mold_rod"
+  },
+  "results": [
+    {
+      "item": "gastronomyworks:baguette"
+    },
+    {
+      "item": "immersiveengineering:mold_rod"
+    }
+  ]
+}

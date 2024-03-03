@@ -1,0 +1,13 @@
+{
+  "type": "immersiveengineering:crusher",
+  "energy": 800,
+  "input": {
+    "item": "minecraft:wheat"
+  },
+  "result": {
+    "basePredicate": {
+      "tag": "forge:flour/wheat"
+    },
+    "count": 2
+  }
+}

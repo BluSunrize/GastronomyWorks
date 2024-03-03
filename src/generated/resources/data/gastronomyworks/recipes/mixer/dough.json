@@ -1,0 +1,20 @@
+{
+  "type": "immersiveengineering:mixer",
+  "energy": 800,
+  "fluid": {
+    "amount": 250,
+    "tag": "minecraft:water"
+  },
+  "inputs": [
+    {
+      "basePredicate": {
+        "tag": "forge:flour/wheat"
+      },
+      "count": 2
+    }
+  ],
+  "result": {
+    "Amount": 250,
+    "FluidName": "gastronomyworks:dough"
+  }
+}
