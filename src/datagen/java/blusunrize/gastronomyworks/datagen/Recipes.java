@@ -10,7 +10,6 @@ import blusunrize.immersiveengineering.data.recipes.builder.BlueprintCraftingRec
 import blusunrize.immersiveengineering.data.recipes.builder.BottlingMachineRecipeBuilder;
 import blusunrize.immersiveengineering.data.recipes.builder.CrusherRecipeBuilder;
 import blusunrize.immersiveengineering.data.recipes.builder.MixerRecipeBuilder;
-import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -25,17 +24,15 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.fluids.FluidType;
 
-import java.util.concurrent.CompletableFuture;
-
 import static blusunrize.gastronomyworks.GastronomyWorks.rl;
 
 public class Recipes extends RecipeProvider
 {
 	private static final int quarter_bucket = FluidType.BUCKET_VOLUME/4;
 
-	public Recipes(PackOutput packOutput, CompletableFuture<Provider> lookupProvider)
+	public Recipes(PackOutput packOutput)
 	{
-		super(packOutput, lookupProvider);
+		super(packOutput);
 	}
 
 	@Override

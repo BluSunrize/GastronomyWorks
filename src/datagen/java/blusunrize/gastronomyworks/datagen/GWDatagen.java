@@ -23,7 +23,7 @@ public class GWDatagen
 
 		generator.addProvider(event.includeClient(), new ItemModels(packOutput, event.getExistingFileHelper()));
 
-		generator.addProvider(event.includeServer(), new Recipes(packOutput, lookupProvider));
+		generator.addProvider(event.includeServer(), new Recipes(packOutput));
 
 		BlockTags blockTags = new BlockTags(packOutput, lookupProvider, event.getExistingFileHelper());
 		generator.addProvider(event.includeServer(), blockTags);
