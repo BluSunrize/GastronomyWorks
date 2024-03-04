@@ -12,5 +12,7 @@
   "item.gastronomyworks.sourdough_starter": "Sourdough Starter",
   "item.gastronomyworks.baguette": "Baguette",
   "item.gastronomyworks.baguette_raw": "Baguette Dough",
-  "item.gastronomyworks.bread_raw": "Bread Dough"
+  "item.gastronomyworks.bread_raw": "Bread Dough",
+  "item.gastronomyworks.sourdough_bread": "Sourdough Bread",
+  "item.gastronomyworks.sourdough_bread_raw": "Sourdough Bread Dough"
 }

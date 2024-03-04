@@ -60,12 +60,13 @@ public class GWRegistration
 		public static final DeferredRegister.Items REGISTER = DeferredRegister.createItems(GastronomyWorks.MODID);
 		public static final DeferredItem<Item> FLOUR = makeItem("flour", new Item.Properties());
 		public static final DeferredItem<Item> SOURDOUGH_STARTER = makeItem("sourdough_starter", new Item.Properties());
-		public static final BakedGood BAGUETTE = BakedGood.make("baguette", 5, 0.75f);
+		public static final BakedGood BAGUETTE = BakedGood.make("baguette", 5, 0.6f);
 
-		public static final BakedGood BREAD = new BakedGood(
+		public static final BakedGood BREAD = new BakedGood( //vanilla bread; nutrition 5, saturation 0.6f
 				makeItem("bread_raw", new Properties()),
 				net.minecraft.world.item.Items.BREAD
 		);
+		public static final BakedGood SOURDOUGH_BREAD = BakedGood.make("sourdough_bread", 5, 1f);
 
 
 		public static final DeferredItem<Item> LOAF_PAN = makeItem("loaf_pan", new Item.Properties().stacksTo(1));

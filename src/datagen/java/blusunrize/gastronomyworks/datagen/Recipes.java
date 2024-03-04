@@ -91,6 +91,13 @@ public class Recipes extends RecipeProvider
 				.input(GWRegistration.Items.LOAF_PAN)
 				.build(consumer, rl("bottling/bread"));
 
+		BottlingMachineRecipeBuilder.builder()
+				.output(GWRegistration.Items.SOURDOUGH_BREAD.raw())
+				.output(GWRegistration.Items.LOAF_PAN)
+				.fluidInput(GWTags.fluidSourdough, quarter_bucket)
+				.input(GWRegistration.Items.LOAF_PAN)
+				.build(consumer, rl("bottling/sourdough_bread"));
+
 		for(BakedGood bakedGood : GWRegistration.Items.BAKED_GOODS)
 			addFoodCookingRecipe(consumer, bakedGood.raw(), bakedGood.baked());
 	}
