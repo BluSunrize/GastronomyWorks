@@ -66,7 +66,9 @@ public class GWRegistration
 				makeItem("bread_raw", new Properties()),
 				net.minecraft.world.item.Items.BREAD
 		);
+		public static final BakedGood BREADROLL = BakedGood.make("breadroll", 3, 0.6f);
 		public static final BakedGood SOURDOUGH_BREAD = BakedGood.make("sourdough_bread", 5, 1f);
+		public static final BakedGood SOURDOUGH_BREADROLL = BakedGood.make("sourdough_breadroll", 3, 1f);
 
 
 		public static final DeferredItem<Item> LOAF_PAN = makeItem("loaf_pan", new Item.Properties().stacksTo(1));

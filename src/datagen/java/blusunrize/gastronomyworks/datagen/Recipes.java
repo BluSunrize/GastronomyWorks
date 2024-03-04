@@ -41,7 +41,7 @@ public class Recipes extends RecipeProvider
 	{
 		Item hammer = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "hammer"));
 		Item rodMold = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "mold_rod"));
-
+		Item packing4Mold = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "mold_packing_4"));
 
 		BlueprintCraftingRecipeBuilder.builder()
 				.category("molds")
@@ -92,11 +92,25 @@ public class Recipes extends RecipeProvider
 				.build(consumer, rl("bottling/bread"));
 
 		BottlingMachineRecipeBuilder.builder()
+				.output(GWRegistration.Items.BREADROLL.raw(), 4)
+				.output(packing4Mold)
+				.fluidInput(GWTags.fluidDough, half_bucket)
+				.input(packing4Mold)
+				.build(consumer, rl("bottling/breadroll"));
+
+		BottlingMachineRecipeBuilder.builder()
 				.output(GWRegistration.Items.SOURDOUGH_BREAD.raw())
 				.output(GWRegistration.Items.LOAF_PAN)
 				.fluidInput(GWTags.fluidSourdough, quarter_bucket)
 				.input(GWRegistration.Items.LOAF_PAN)
 				.build(consumer, rl("bottling/sourdough_bread"));
+
+		BottlingMachineRecipeBuilder.builder()
+				.output(GWRegistration.Items.SOURDOUGH_BREADROLL.raw(), 4)
+				.output(packing4Mold)
+				.fluidInput(GWTags.fluidDough, half_bucket)
+				.input(packing4Mold)
+				.build(consumer, rl("bottling/sourdough_breadroll"));
 
 		for(BakedGood bakedGood : GWRegistration.Items.BAKED_GOODS)
 			addFoodCookingRecipe(consumer, bakedGood.raw(), bakedGood.baked());

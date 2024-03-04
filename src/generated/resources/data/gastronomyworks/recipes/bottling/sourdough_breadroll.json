@@ -1,0 +1,21 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 500,
+    "tag": "forge:dough"
+  },
+  "input": {
+    "item": "immersiveengineering:mold_packing_4"
+  },
+  "results": [
+    {
+      "basePredicate": {
+        "item": "gastronomyworks:sourdough_breadroll_raw"
+      },
+      "count": 4
+    },
+    {
+      "item": "immersiveengineering:mold_packing_4"
+    }
+  ]
+}

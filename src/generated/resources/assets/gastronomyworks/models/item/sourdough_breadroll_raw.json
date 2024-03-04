@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gastronomyworks:item/sourdough_breadroll_raw"
+  }
+}

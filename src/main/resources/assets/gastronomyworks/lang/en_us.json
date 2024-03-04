@@ -13,6 +13,10 @@
   "item.gastronomyworks.baguette": "Baguette",
   "item.gastronomyworks.baguette_raw": "Baguette Dough",
   "item.gastronomyworks.bread_raw": "Bread Dough",
+  "item.gastronomyworks.breadroll": "Bread Roll",
+  "item.gastronomyworks.breadroll_raw": "Bread Roll Dough",
   "item.gastronomyworks.sourdough_bread": "Sourdough Bread",
-  "item.gastronomyworks.sourdough_bread_raw": "Sourdough Bread Dough"
+  "item.gastronomyworks.sourdough_bread_raw": "Sourdough Bread Dough",
+  "item.gastronomyworks.sourdough_breadroll": "Sourdough Bread Roll",
+  "item.gastronomyworks.sourdough_breadroll_raw": "Sourdough Bread Roll Dough"
 }
