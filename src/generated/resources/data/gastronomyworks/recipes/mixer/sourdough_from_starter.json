@@ -1,0 +1,23 @@
+{
+  "type": "immersiveengineering:mixer",
+  "energy": 1200,
+  "fluid": {
+    "amount": 250,
+    "tag": "minecraft:water"
+  },
+  "inputs": [
+    {
+      "basePredicate": {
+        "tag": "forge:flour/wheat"
+      },
+      "count": 2
+    },
+    {
+      "item": "gastronomyworks:sourdough_starter"
+    }
+  ],
+  "result": {
+    "Amount": 250,
+    "FluidName": "gastronomyworks:sourdough"
+  }
+}

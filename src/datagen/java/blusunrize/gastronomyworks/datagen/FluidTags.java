@@ -21,5 +21,6 @@ public class FluidTags extends FluidTagsProvider
 	protected void addTags(Provider provider)
 	{
 		tag(GWTags.fluidDough).add(GWRegistration.Fluids.DOUGH.get());
+		tag(GWTags.fluidSourdough).add(GWRegistration.Fluids.SOURDOUGH.get());
 	}
 }

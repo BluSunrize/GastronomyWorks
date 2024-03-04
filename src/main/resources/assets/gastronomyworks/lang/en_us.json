@@ -4,9 +4,12 @@
   "language.region": "United States",
   "itemGroup.gastronomyworks": "Gastronomy Works",
   "fluid_type.gastronomyworks.dough": "Dough",
+  "fluid_type.gastronomyworks.sourdough": "Sourdough",
   "item.gastronomyworks.dough_bucket": "Bucket of Dough",
+  "item.gastronomyworks.sourdough_bucket": "Bucket of Sourdough",
   "item.gastronomyworks.flour": "Flour",
   "item.gastronomyworks.loaf_pan": "Loaf Pan",
+  "item.gastronomyworks.sourdough_starter": "Sourdough Starter",
   "item.gastronomyworks.baguette": "Baguette",
   "item.gastronomyworks.baguette_raw": "Baguette Dough",
   "item.gastronomyworks.bread_raw": "Bread Dough"

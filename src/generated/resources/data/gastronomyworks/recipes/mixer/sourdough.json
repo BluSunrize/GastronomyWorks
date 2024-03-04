@@ -1,0 +1,20 @@
+{
+  "type": "immersiveengineering:mixer",
+  "energy": 800,
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:sourdough"
+  },
+  "inputs": [
+    {
+      "basePredicate": {
+        "tag": "forge:flour/wheat"
+      },
+      "count": 2
+    }
+  ],
+  "result": {
+    "Amount": 500,
+    "FluidName": "gastronomyworks:sourdough"
+  }
+}

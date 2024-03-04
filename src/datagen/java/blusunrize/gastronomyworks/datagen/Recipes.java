@@ -28,6 +28,7 @@ import static blusunrize.gastronomyworks.GastronomyWorks.rl;
 
 public class Recipes extends RecipeProvider
 {
+	private static final int half_bucket = FluidType.BUCKET_VOLUME/2;
 	private static final int quarter_bucket = FluidType.BUCKET_VOLUME/4;
 
 	public Recipes(PackOutput packOutput)
@@ -61,6 +62,20 @@ public class Recipes extends RecipeProvider
 				.input(GWTags.flourWheat, 2)
 				.setEnergy(800)
 				.build(consumer, rl("mixer/dough"));
+
+		MixerRecipeBuilder.builder()
+				.output(GWRegistration.Fluids.SOURDOUGH.get(), quarter_bucket)
+				.fluidInput(FluidTags.WATER, quarter_bucket)
+				.input(GWTags.flourWheat, 2)
+				.input(GWRegistration.Items.SOURDOUGH_STARTER, 1)
+				.setEnergy(1200)
+				.build(consumer, rl("mixer/sourdough_from_starter"));
+		MixerRecipeBuilder.builder()
+				.output(GWRegistration.Fluids.SOURDOUGH.get(), half_bucket)
+				.fluidInput(GWTags.fluidSourdough, quarter_bucket)
+				.input(GWTags.flourWheat, 2)
+				.setEnergy(800)
+				.build(consumer, rl("mixer/sourdough"));
 
 		BottlingMachineRecipeBuilder.builder()
 				.output(GWRegistration.Items.BAGUETTE.raw())

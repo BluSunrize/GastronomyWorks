@@ -59,6 +59,7 @@ public class GWRegistration
 		public static final List<BakedGood> BAKED_GOODS = new ArrayList<>();
 		public static final DeferredRegister.Items REGISTER = DeferredRegister.createItems(GastronomyWorks.MODID);
 		public static final DeferredItem<Item> FLOUR = makeItem("flour", new Item.Properties());
+		public static final DeferredItem<Item> SOURDOUGH_STARTER = makeItem("sourdough_starter", new Item.Properties());
 		public static final BakedGood BAGUETTE = BakedGood.make("baguette", 5, 0.75f);
 
 		public static final BakedGood BREAD = new BakedGood(
@@ -112,6 +113,22 @@ public class GWRegistration
 				"dough",
 				rl("block/fluid/dough"),
 				rl("block/fluid/dough"),
+				FluidType.Properties.create()
+						.canSwim(false)
+						.canDrown(false)
+						.pathType(BlockPathTypes.STICKY_HONEY)
+						.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
+						.sound(net.neoforged.neoforge.common.SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
+						.rarity(Rarity.COMMON)
+						.density(4000)
+						.viscosity(4000)
+						.lightLevel(0)
+		);
+
+		public static final FluidEntry SOURDOUGH = FluidEntry.make(
+				"sourdough",
+				rl("block/fluid/sourdough"),
+				rl("block/fluid/sourdough"),
 				FluidType.Properties.create()
 						.canSwim(false)
 						.canDrown(false)
