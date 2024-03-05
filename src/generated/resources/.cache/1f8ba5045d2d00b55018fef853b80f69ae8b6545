@@ -1,3 +1,4 @@
-// 1.20.4	2024-03-03T22:52:22.8991121	Tags for minecraft:fluid mod id gastronomyworks
+// 1.20.4	2024-03-05T12:11:35.2709949	Tags for minecraft:fluid mod id gastronomyworks
 abbd2d1e206185dcf77d3ac60938930fbdc58f9a data/forge/tags/fluids/dough.json
+5a901680e93e4e75b0f977d6e50ed1616b426d8f data/forge/tags/fluids/milkdough.json
 898dbbdd8b09a8b35432a89f69c252fc1359f652 data/forge/tags/fluids/sourdough.json

@@ -11,6 +11,7 @@ public class GWTags
 	public static final TagKey<Item> flourWheat = TagKey.create(Registries.ITEM, forgeLoc("flour/wheat"));
 	public static final TagKey<Fluid> fluidDough = TagKey.create(Registries.FLUID, forgeLoc("dough"));
 	public static final TagKey<Fluid> fluidSourdough = TagKey.create(Registries.FLUID, forgeLoc("sourdough"));
+	public static final TagKey<Fluid> fluidMilkdough = TagKey.create(Registries.FLUID, forgeLoc("milkdough"));
 
 
 	private static ResourceLocation forgeLoc(String path)

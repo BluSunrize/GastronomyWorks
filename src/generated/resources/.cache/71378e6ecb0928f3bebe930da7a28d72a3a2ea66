@@ -1,4 +1,4 @@
-// 1.20.4	2024-03-04T18:35:08.0919874	Item Models: gastronomyworks
+// 1.20.4	2024-03-05T12:11:35.2689943	Item Models: gastronomyworks
 c3004b809a6ff1fcdcce2b0161428ae2f3311e2c assets/gastronomyworks/models/item/baguette.json
 f55a876d129ba17547ae9cd463da15fa13e022eb assets/gastronomyworks/models/item/baguette_raw.json
 f2838aa6dffb6285099fdd17ca9c0b4dad9175fa assets/gastronomyworks/models/item/breadroll.json
@@ -7,6 +7,7 @@ f2838aa6dffb6285099fdd17ca9c0b4dad9175fa assets/gastronomyworks/models/item/brea
 010d78d1a1e86b6cb982d01feadbdeeb1bfcb705 assets/gastronomyworks/models/item/dough_bucket.json
 3edeb0fb4a9f7360f1a84f1f1ef83d4929f9dbfa assets/gastronomyworks/models/item/flour.json
 ece191bbc416e2c705bc87b1656cd49d841b020b assets/gastronomyworks/models/item/loaf_pan.json
+502970e74d6681f744a2237274c1985076e7def0 assets/gastronomyworks/models/item/milkdough_bucket.json
 cce8af0c4931b317082c6636969ab26114d56841 assets/gastronomyworks/models/item/sourdough_bread.json
 9dd936abbcd5e561e9a45a4666586e01a96f6650 assets/gastronomyworks/models/item/sourdough_breadroll.json
 32b0646e9b51bf18d93474175636e9a43ce6a81d assets/gastronomyworks/models/item/sourdough_breadroll_raw.json

@@ -1,0 +1,5 @@
+{
+  "parent": "neoforge:item/bucket",
+  "fluid": "gastronomyworks:milkdough",
+  "loader": "neoforge:fluid_container"
+}

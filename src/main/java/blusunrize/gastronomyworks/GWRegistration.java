@@ -116,38 +116,36 @@ public class GWRegistration
 				"dough",
 				rl("block/fluid/dough"),
 				rl("block/fluid/dough"),
-				FluidType.Properties.create()
-						.canSwim(false)
-						.canDrown(false)
-						.pathType(BlockPathTypes.STICKY_HONEY)
-						.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
-						.sound(net.neoforged.neoforge.common.SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
-						.rarity(Rarity.COMMON)
-						.density(4000)
-						.viscosity(4000)
-						.lightLevel(0)
+				doughProperties()
 		);
 
 		public static final FluidEntry SOURDOUGH = FluidEntry.make(
 				"sourdough",
 				rl("block/fluid/sourdough"),
 				rl("block/fluid/sourdough"),
-				FluidType.Properties.create()
-						.canSwim(false)
-						.canDrown(false)
-						.pathType(BlockPathTypes.STICKY_HONEY)
-						.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
-						.sound(net.neoforged.neoforge.common.SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
-						.rarity(Rarity.COMMON)
-						.density(4000)
-						.viscosity(4000)
-						.lightLevel(0)
+				doughProperties()
 		);
+
+		public static final FluidEntry MILKDOUGH = FluidEntry.make(
+				"milkdough",
+				rl("block/fluid/milkdough"),
+				rl("block/fluid/milkdough"),
+				doughProperties()
+		);
+
 
 		private static void init(IEventBus modEventBus)
 		{
 			REGISTER.register(modEventBus);
 			TYPE_REGISTER.register(modEventBus);
+		}
+
+		private static FluidType.Properties doughProperties()
+		{
+			return FluidType.Properties.create()
+					.canSwim(false).canDrown(false).pathType(BlockPathTypes.STICKY_HONEY)
+					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
+					.density(4000).viscosity(4000).lightLevel(0);
 		}
 
 		public record FluidEntry(

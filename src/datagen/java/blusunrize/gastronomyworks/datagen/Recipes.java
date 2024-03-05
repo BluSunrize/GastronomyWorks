@@ -22,6 +22,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.NeoForgeMod;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.Tags.Fluids;
 import net.neoforged.neoforge.fluids.FluidType;
 
 import static blusunrize.gastronomyworks.GastronomyWorks.rl;
@@ -76,6 +79,15 @@ public class Recipes extends RecipeProvider
 				.input(GWTags.flourWheat, 2)
 				.setEnergy(800)
 				.build(consumer, rl("mixer/sourdough"));
+
+		MixerRecipeBuilder.builder()
+				.output(GWRegistration.Fluids.MILKDOUGH.get(), half_bucket)
+				.fluidInput(Fluids.MILK, half_bucket)
+				.input(GWTags.flourWheat, 4)
+				.input(Tags.Items.EGGS)
+				.input(Items.SUGAR, 2)
+				.setEnergy(800)
+				.build(consumer, rl("mixer/milkdough"));
 
 		BottlingMachineRecipeBuilder.builder()
 				.output(GWRegistration.Items.BAGUETTE.raw())

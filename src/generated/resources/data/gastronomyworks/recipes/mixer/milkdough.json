@@ -1,0 +1,29 @@
+{
+  "type": "immersiveengineering:mixer",
+  "energy": 800,
+  "fluid": {
+    "amount": 500,
+    "tag": "forge:milk"
+  },
+  "inputs": [
+    {
+      "basePredicate": {
+        "tag": "forge:flour/wheat"
+      },
+      "count": 4
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "basePredicate": {
+        "item": "minecraft:sugar"
+      },
+      "count": 2
+    }
+  ],
+  "result": {
+    "Amount": 500,
+    "FluidName": "gastronomyworks:milkdough"
+  }
+}
