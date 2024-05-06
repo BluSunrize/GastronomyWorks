@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:milkdough"
+  },
+  "input": {
+    "item": "gastronomyworks:loaf_pan"
+  },
+  "results": [
+    {
+      "item": "gastronomyworks:milk_bread_raw"
+    },
+    {
+      "item": "gastronomyworks:loaf_pan"
+    }
+  ]
+}

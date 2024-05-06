@@ -20,5 +20,7 @@
   "item.gastronomyworks.sourdough_bread": "Sourdough Bread",
   "item.gastronomyworks.sourdough_bread_raw": "Sourdough Bread Dough",
   "item.gastronomyworks.sourdough_breadroll": "Sourdough Bread Roll",
-  "item.gastronomyworks.sourdough_breadroll_raw": "Sourdough Bread Roll Dough"
+  "item.gastronomyworks.sourdough_breadroll_raw": "Sourdough Bread Roll Dough",
+  "item.gastronomyworks.milk_bread": "Milk Bread",
+  "item.gastronomyworks.milk_bread_raw": "Milk Bread Dough"
 }

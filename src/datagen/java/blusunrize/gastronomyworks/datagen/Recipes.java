@@ -123,6 +123,13 @@ public class Recipes extends RecipeProvider
 				.input(packing4Mold)
 				.build(consumer, rl("bottling/sourdough_breadroll"));
 
+		BottlingMachineRecipeBuilder.builder()
+				.output(GWRegistration.Items.MILK_BREAD.raw())
+				.output(GWRegistration.Items.LOAF_PAN)
+				.fluidInput(GWTags.fluidMilkdough, quarter_bucket)
+				.input(GWRegistration.Items.LOAF_PAN)
+				.build(consumer, rl("bottling/milk_bread"));
+
 		for(BakedGood bakedGood : GWRegistration.Items.BAKED_GOODS)
 			addFoodCookingRecipe(consumer, bakedGood.raw(), bakedGood.baked());
 	}
