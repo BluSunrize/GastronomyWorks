@@ -22,7 +22,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.Tags.Fluids;
 import net.neoforged.neoforge.fluids.FluidType;
@@ -120,7 +119,7 @@ public class Recipes extends RecipeProvider
 		BottlingMachineRecipeBuilder.builder()
 				.output(GWRegistration.Items.SOURDOUGH_BREADROLL.raw(), 4)
 				.output(packing4Mold)
-				.fluidInput(GWTags.fluidDough, half_bucket)
+				.fluidInput(GWTags.fluidSourdough, half_bucket)
 				.input(packing4Mold)
 				.build(consumer, rl("bottling/sourdough_breadroll"));
 
