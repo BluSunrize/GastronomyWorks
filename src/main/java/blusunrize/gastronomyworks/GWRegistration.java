@@ -70,7 +70,9 @@ public class GWRegistration
 		public static final BakedGood SOURDOUGH_BREAD = BakedGood.make("sourdough_bread", 5, 1f);
 		public static final BakedGood SOURDOUGH_BREADROLL = BakedGood.make("sourdough_breadroll", 3, 1f);
 
-		public static final BakedGood MILK_BREAD = BakedGood.make("milk_bread", 6, 0.2f);
+		public static final BakedGood MILK_BREAD = BakedGood.make("milk_bread", 6, 0.1f);
+
+		public static final BakedGood CAKE_BASE = BakedGood.make("cake_base", 6, 0.1f);
 
 		public static final DeferredItem<Item> LOAF_PAN = makeItem("loaf_pan", new Item.Properties().stacksTo(1));
 
@@ -131,6 +133,13 @@ public class GWRegistration
 				"milkdough",
 				rl("block/fluid/milkdough"),
 				rl("block/fluid/milkdough"),
+				doughProperties()
+		);
+
+		public static final FluidEntry CUSTARD = FluidEntry.make(
+				"custard",
+				rl("block/fluid/custard"),
+				rl("block/fluid/custard"),
 				doughProperties()
 		);
 

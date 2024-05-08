@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 500,
+    "tag": "forge:custard"
+  },
+  "input": {
+    "item": "gastronomyworks:cake_base"
+  },
+  "results": [
+    {
+      "item": "minecraft:cake"
+    }
+  ]
+}

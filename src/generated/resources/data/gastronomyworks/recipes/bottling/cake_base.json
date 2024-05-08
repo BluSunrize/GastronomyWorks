@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:milkdough"
+  },
+  "input": {
+    "item": "immersiveengineering:mold_plate"
+  },
+  "results": [
+    {
+      "item": "gastronomyworks:cake_base_raw"
+    },
+    {
+      "item": "immersiveengineering:mold_plate"
+    }
+  ]
+}

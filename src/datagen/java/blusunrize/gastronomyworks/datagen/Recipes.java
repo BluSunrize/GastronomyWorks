@@ -32,6 +32,7 @@ public class Recipes extends RecipeProvider
 {
 	private static final int half_bucket = FluidType.BUCKET_VOLUME/2;
 	private static final int quarter_bucket = FluidType.BUCKET_VOLUME/4;
+	private static final int eighth_bucket = FluidType.BUCKET_VOLUME/8;
 
 	public Recipes(PackOutput packOutput)
 	{
@@ -43,6 +44,7 @@ public class Recipes extends RecipeProvider
 	{
 		Item hammer = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "hammer"));
 		Item rodMold = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "mold_rod"));
+		Item plateMold = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "mold_plate"));
 		Item packing4Mold = BuiltInRegistries.ITEM.get(new ResourceLocation("immersiveengineering", "mold_packing_4"));
 
 		BlueprintCraftingRecipeBuilder.builder()
@@ -84,9 +86,17 @@ public class Recipes extends RecipeProvider
 				.fluidInput(Fluids.MILK, half_bucket)
 				.input(GWTags.flourWheat, 4)
 				.input(Tags.Items.EGGS)
-				.input(Items.SUGAR, 2)
+				.input(Items.SUGAR)
 				.setEnergy(800)
 				.build(consumer, rl("mixer/milkdough"));
+
+		MixerRecipeBuilder.builder()
+				.output(GWRegistration.Fluids.CUSTARD.get(), FluidType.BUCKET_VOLUME)
+				.fluidInput(Fluids.MILK, FluidType.BUCKET_VOLUME)
+				.input(Tags.Items.EGGS, 2)
+				.input(Items.SUGAR, 4)
+				.setEnergy(1200)
+				.build(consumer, rl("mixer/custard"));
 
 		BottlingMachineRecipeBuilder.builder()
 				.output(GWRegistration.Items.BAGUETTE.raw())
@@ -129,6 +139,19 @@ public class Recipes extends RecipeProvider
 				.fluidInput(GWTags.fluidMilkdough, quarter_bucket)
 				.input(GWRegistration.Items.LOAF_PAN)
 				.build(consumer, rl("bottling/milk_bread"));
+
+		BottlingMachineRecipeBuilder.builder()
+				.output(GWRegistration.Items.CAKE_BASE.raw())
+				.output(plateMold)
+				.fluidInput(GWTags.fluidMilkdough, quarter_bucket)
+				.input(plateMold)
+				.build(consumer, rl("bottling/cake_base"));
+
+		BottlingMachineRecipeBuilder.builder()
+				.output(Items.CAKE)
+				.fluidInput(GWTags.fluidCustard, half_bucket)
+				.input(GWRegistration.Items.CAKE_BASE.baked())
+				.build(consumer, rl("bottling/cake"));
 
 		for(BakedGood bakedGood : GWRegistration.Items.BAKED_GOODS)
 			addFoodCookingRecipe(consumer, bakedGood.raw(), bakedGood.baked());

@@ -9,6 +9,8 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -16,6 +18,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.NeoForgeMod;
+import net.neoforged.neoforge.common.brewing.BrewingRecipeRegistry;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
@@ -46,6 +49,11 @@ public class GastronomyWorks
 
 	private void commonSetup(final FMLCommonSetupEvent event)
 	{
+//		event.enqueueWork(() -> BrewingRecipeRegistry.addRecipe(
+//				Ingredient.of(Items.POTION.getDefaultInstance()),
+//				Ingredient.of(Items.APPLE),
+//				GWRegistration.Items.SOURDOUGH_STARTER.toStack()
+//		));
 	}
 
 	@SubscribeEvent

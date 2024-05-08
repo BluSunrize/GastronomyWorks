@@ -6,6 +6,7 @@
   "fluid_type.gastronomyworks.dough": "Dough",
   "fluid_type.gastronomyworks.sourdough": "Sourdough",
   "fluid_type.gastronomyworks.milkdough": "Milkdough",
+  "fluid_type.gastronomyworks.custard": "Custard",
   "item.gastronomyworks.dough_bucket": "Bucket of Dough",
   "item.gastronomyworks.sourdough_bucket": "Bucket of Sourdough",
   "item.gastronomyworks.milkdough_bucket": "Bucket of Milkdough",
@@ -22,5 +23,7 @@
   "item.gastronomyworks.sourdough_breadroll": "Sourdough Bread Roll",
   "item.gastronomyworks.sourdough_breadroll_raw": "Sourdough Bread Roll Dough",
   "item.gastronomyworks.milk_bread": "Milk Bread",
-  "item.gastronomyworks.milk_bread_raw": "Milk Bread Dough"
+  "item.gastronomyworks.milk_bread_raw": "Milk Bread Dough",
+  "item.gastronomyworks.cake_base": "Cake Base",
+  "item.gastronomyworks.cake_base_raw": "Cake Dough"
 }

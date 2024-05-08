@@ -1,0 +1,26 @@
+{
+  "type": "immersiveengineering:mixer",
+  "energy": 1200,
+  "fluid": {
+    "amount": 1000,
+    "tag": "forge:milk"
+  },
+  "inputs": [
+    {
+      "basePredicate": {
+        "tag": "forge:eggs"
+      },
+      "count": 2
+    },
+    {
+      "basePredicate": {
+        "item": "minecraft:sugar"
+      },
+      "count": 4
+    }
+  ],
+  "result": {
+    "Amount": 1000,
+    "FluidName": "gastronomyworks:custard"
+  }
+}

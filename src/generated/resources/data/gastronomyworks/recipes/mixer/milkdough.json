@@ -16,10 +16,7 @@
       "tag": "forge:eggs"
     },
     {
-      "basePredicate": {
-        "item": "minecraft:sugar"
-      },
-      "count": 2
+      "item": "minecraft:sugar"
     }
   ],
   "result": {
