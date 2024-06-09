@@ -1,4 +1,4 @@
-// 1.20.4	2024-06-09T10:13:23.0116042	Item Models: gastronomyworks
+// 1.20.4	2024-06-09T13:22:14.5458629	Item Models: gastronomyworks
 c3004b809a6ff1fcdcce2b0161428ae2f3311e2c assets/gastronomyworks/models/item/baguette.json
 f55a876d129ba17547ae9cd463da15fa13e022eb assets/gastronomyworks/models/item/baguette_raw.json
 f2838aa6dffb6285099fdd17ca9c0b4dad9175fa assets/gastronomyworks/models/item/breadroll.json
@@ -6,6 +6,7 @@ f2838aa6dffb6285099fdd17ca9c0b4dad9175fa assets/gastronomyworks/models/item/brea
 9953b1f4e05e4a55b4980f85274ba42cfb6bce68 assets/gastronomyworks/models/item/bread_raw.json
 808483d36331cacfa2dca0a1981af40e6f8e12e9 assets/gastronomyworks/models/item/cake_base.json
 3ced8f0d2634a3525f7d8714e466deb65dfed18f assets/gastronomyworks/models/item/cake_base_raw.json
+c7b683c1addbd9446844cfb1fa439def29361470 assets/gastronomyworks/models/item/canned_stew.json
 aee1559e7e1fa7a091ea000eb243f95993ed6967 assets/gastronomyworks/models/item/custard_bucket.json
 010d78d1a1e86b6cb982d01feadbdeeb1bfcb705 assets/gastronomyworks/models/item/dough_bucket.json
 3edeb0fb4a9f7360f1a84f1f1ef83d4929f9dbfa assets/gastronomyworks/models/item/flour.json
@@ -20,3 +21,4 @@ cce8af0c4931b317082c6636969ab26114d56841 assets/gastronomyworks/models/item/sour
 6fdabd5746ff1057fa3cc76d21a277e500c965ff assets/gastronomyworks/models/item/sourdough_bucket.json
 cd9f6af1bb8e3f8a71ef98373744182a7acd3231 assets/gastronomyworks/models/item/sourdough_starter.json
 9c967e0bd9a4fbcae21eed282cc1494707629df6 assets/gastronomyworks/models/item/stew_bucket.json
+58d8f5157e1bdcecfa4a48d832b837c75ffa4425 assets/gastronomyworks/models/item/tin_can.json

@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:bottling_machine",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:stew"
+  },
+  "input": {
+    "item": "gastronomyworks:tin_can"
+  },
+  "results": [
+    {
+      "item": "gastronomyworks:canned_stew"
+    }
+  ]
+}

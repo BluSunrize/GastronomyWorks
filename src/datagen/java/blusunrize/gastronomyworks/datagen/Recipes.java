@@ -10,12 +10,11 @@ import blusunrize.immersiveengineering.data.recipes.builder.BlueprintCraftingRec
 import blusunrize.immersiveengineering.data.recipes.builder.BottlingMachineRecipeBuilder;
 import blusunrize.immersiveengineering.data.recipes.builder.CrusherRecipeBuilder;
 import blusunrize.immersiveengineering.data.recipes.builder.MixerRecipeBuilder;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.item.Item;
@@ -53,6 +52,16 @@ public class Recipes extends RecipeProvider
 				.input(new IngredientWithSize(IETags.getTagsFor(EnumMetals.STEEL).plate, 3))
 				.input(hammer)
 				.build(consumer, rl("blueprint/mold_box"));
+
+		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, GWRegistration.Items.TIN_CAN, 10)
+				.pattern("p p")
+				.pattern("p p")
+				.pattern(" p ")
+				.define('p', IETags.getTagsFor(EnumMetals.ALUMINUM).plate)
+				.unlockedBy("has_plate", InventoryChangeTrigger.TriggerInstance.hasItems(
+						ItemPredicate.Builder.item().of(IETags.getTagsFor(EnumMetals.ALUMINUM).plate)
+				))
+				.save(consumer, rl("tin_can"));
 
 		CrusherRecipeBuilder.builder()
 				.output(GWTags.flourWheat, 2)
@@ -162,6 +171,12 @@ public class Recipes extends RecipeProvider
 				.fluidInput(GWTags.fluidCustard, half_bucket)
 				.input(GWRegistration.Items.CAKE_BASE.baked())
 				.build(consumer, rl("bottling/cake"));
+
+		BottlingMachineRecipeBuilder.builder()
+				.output(GWRegistration.Items.CANNED_STEW)
+				.fluidInput(GWTags.fluidStew, quarter_bucket)
+				.input(GWRegistration.Items.TIN_CAN)
+				.build(consumer, rl("bottling/canned_stew"));
 
 		for(BakedGood bakedGood : GWRegistration.Items.BAKED_GOODS)
 			addFoodCookingRecipe(consumer, bakedGood.raw(), bakedGood.baked());

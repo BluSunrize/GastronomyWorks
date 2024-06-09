@@ -1,9 +1,12 @@
 package blusunrize.gastronomyworks;
 
+import blusunrize.gastronomyworks.GWRegistration.Fluids.FluidEntry;
+import blusunrize.gastronomyworks.items.CannedFood;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
@@ -27,6 +30,7 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static blusunrize.gastronomyworks.GastronomyWorks.rl;
@@ -76,6 +80,12 @@ public class GWRegistration
 
 		public static final DeferredItem<Item> LOAF_PAN = makeItem("loaf_pan", new Item.Properties().stacksTo(1));
 
+		public static final DeferredItem<Item> TIN_CAN = makeItem("tin_can", new Item.Properties());
+
+		public static final DeferredItem<Item> CANNED_STEW = makeItem("canned_stew", () -> new CannedFood(
+				new Item.Properties().food(foodProperties(5, 0.6f))
+		));
+
 		private static void init(IEventBus modEventBus)
 		{
 			REGISTER.register(modEventBus);
@@ -86,6 +96,18 @@ public class GWRegistration
 			DeferredItem<Item> deferredItem = REGISTER.registerSimpleItem(name, properties);
 			BASIC_ITEMS.add(deferredItem);
 			return deferredItem;
+		}
+
+		private static DeferredItem<Item> makeItem(String name, Supplier<Item> item)
+		{
+			DeferredItem<Item> deferredItem = REGISTER.register(name, item);
+			BASIC_ITEMS.add(deferredItem);
+			return deferredItem;
+		}
+
+		private static FoodProperties foodProperties(int nutrition, float saturation)
+		{
+			return new FoodProperties.Builder().nutrition(nutrition).saturationMod(saturation).build();
 		}
 
 		public record BakedGood(ItemLike raw, ItemLike baked)
@@ -99,7 +121,7 @@ public class GWRegistration
 			{
 				return new BakedGood(
 						makeItem(name+"_raw", new Properties()),
-						makeItem(name, new Properties().food(new FoodProperties.Builder().nutrition(nutrition).saturationMod(saturation).build()))
+						makeItem(name, new Properties().food(foodProperties(nutrition, saturation)))
 				);
 			}
 		}
@@ -210,11 +232,28 @@ public class GWRegistration
 		}
 	}
 
+
+	public static class Sounds
+	{
+		public static final DeferredRegister<SoundEvent> REGISTER = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, GastronomyWorks.MODID);
+
+		public static final DeferredHolder<SoundEvent, SoundEvent> CAN_OPENING = REGISTER.register(
+				"can_opening",
+				() -> SoundEvent.createVariableRangeEvent(rl("can_opening"))
+		);
+
+		private static void init(IEventBus modEventBus)
+		{
+			REGISTER.register(modEventBus);
+		}
+	}
+
 	public static void init(IEventBus modEventBus)
 	{
 		CREATIVE_TABS.register(modEventBus);
 		Items.init(modEventBus);
 		Fluids.init(modEventBus);
+		Sounds.init(modEventBus);
 	}
 
 	static void addCreative(BuildCreativeModeTabContentsEvent event)

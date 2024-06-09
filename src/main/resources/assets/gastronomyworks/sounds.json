@@ -1,0 +1,9 @@
+{
+  "can_opening": {
+    "category": "player",
+    "sounds": [
+      "gastronomyworks:can_opening"
+    ],
+    "subtitle": "subtitle.gastronomyworks.can_opening"
+  }
+}

@@ -15,6 +15,8 @@
   "item.gastronomyworks.stew_bucket": "Bucket of Mixed Stew",
   "item.gastronomyworks.flour": "Flour",
   "item.gastronomyworks.loaf_pan": "Loaf Pan",
+  "item.gastronomyworks.tin_can": "Preserve Can",
+  "item.gastronomyworks.canned_stew": "Canned Stew",
   "item.gastronomyworks.sourdough_starter": "Sourdough Starter",
   "item.gastronomyworks.baguette": "Baguette",
   "item.gastronomyworks.baguette_raw": "Baguette Dough",
@@ -28,5 +30,6 @@
   "item.gastronomyworks.milk_bread": "Milk Bread",
   "item.gastronomyworks.milk_bread_raw": "Milk Bread Dough",
   "item.gastronomyworks.cake_base": "Cake Base",
-  "item.gastronomyworks.cake_base_raw": "Cake Dough"
+  "item.gastronomyworks.cake_base_raw": "Cake Dough",
+  "subtitle.gastronomyworks.can_opening": "Can opening"
 }

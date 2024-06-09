@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "p": {
+      "tag": "forge:plates/aluminum"
+    }
+  },
+  "pattern": [
+    "p p",
+    "p p",
+    " p "
+  ],
+  "result": {
+    "count": 10,
+    "item": "gastronomyworks:tin_can"
+  }
+}
