@@ -115,33 +115,10 @@ public class GWRegistration
 				NeoForgeRegistries.Keys.FLUID_TYPES, GastronomyWorks.MODID
 		);
 
-		public static final FluidEntry DOUGH = FluidEntry.make(
-				"dough",
-				rl("block/fluid/dough"),
-				rl("block/fluid/dough"),
-				doughProperties()
-		);
-
-		public static final FluidEntry SOURDOUGH = FluidEntry.make(
-				"sourdough",
-				rl("block/fluid/sourdough"),
-				rl("block/fluid/sourdough"),
-				doughProperties()
-		);
-
-		public static final FluidEntry MILKDOUGH = FluidEntry.make(
-				"milkdough",
-				rl("block/fluid/milkdough"),
-				rl("block/fluid/milkdough"),
-				doughProperties()
-		);
-
-		public static final FluidEntry CUSTARD = FluidEntry.make(
-				"custard",
-				rl("block/fluid/custard"),
-				rl("block/fluid/custard"),
-				doughProperties()
-		);
+		public static final FluidEntry DOUGH = FluidEntry.make("dough", doughProperties());
+		public static final FluidEntry SOURDOUGH = FluidEntry.make("sourdough", doughProperties());
+		public static final FluidEntry MILKDOUGH = FluidEntry.make("milkdough", doughProperties());
+		public static final FluidEntry CUSTARD = FluidEntry.make("custard", doughProperties());
 
 
 		private static void init(IEventBus modEventBus)
@@ -169,6 +146,11 @@ public class GWRegistration
 			public Fluid get()
 			{
 				return this.still.get();
+			}
+
+			private static FluidEntry make(String name, FluidType.Properties typeProperties)
+			{
+				return make("custard", rl("block/fluid/"+name), rl("block/fluid/"+name), typeProperties);
 			}
 
 			private static FluidEntry make(

@@ -49,11 +49,6 @@ public class GastronomyWorks
 
 	private void commonSetup(final FMLCommonSetupEvent event)
 	{
-//		event.enqueueWork(() -> BrewingRecipeRegistry.addRecipe(
-//				Ingredient.of(Items.POTION.getDefaultInstance()),
-//				Ingredient.of(Items.APPLE),
-//				GWRegistration.Items.SOURDOUGH_STARTER.toStack()
-//		));
 	}
 
 	@SubscribeEvent
