@@ -24,5 +24,6 @@ public class FluidTags extends FluidTagsProvider
 		tag(GWTags.fluidSourdough).add(GWRegistration.Fluids.SOURDOUGH.get());
 		tag(GWTags.fluidMilkdough).add(GWRegistration.Fluids.MILKDOUGH.get());
 		tag(GWTags.fluidCustard).add(GWRegistration.Fluids.CUSTARD.get());
+		tag(GWTags.fluidStew).add(GWRegistration.Fluids.STEW.get());
 	}
 }

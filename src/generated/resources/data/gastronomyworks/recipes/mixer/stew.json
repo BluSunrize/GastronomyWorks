@@ -1,0 +1,26 @@
+{
+  "type": "immersiveengineering:mixer",
+  "energy": 1200,
+  "fluid": {
+    "amount": 1000,
+    "tag": "minecraft:water"
+  },
+  "inputs": [
+    {
+      "tag": "forge:cooked_meats"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:vegetables"
+    }
+  ],
+  "result": {
+    "Amount": 1000,
+    "FluidName": "gastronomyworks:stew"
+  }
+}

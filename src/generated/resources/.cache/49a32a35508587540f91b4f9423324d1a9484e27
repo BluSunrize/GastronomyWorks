@@ -1,2 +1,4 @@
-// 1.20.4	2024-03-03T13:52:41.2315073	Tags for minecraft:item mod id gastronomyworks
+// 1.20.4	2024-06-09T10:13:23.0146035	Tags for minecraft:item mod id gastronomyworks
+3b5f3a2a3d39a3296e9018da31098729c4e8efb7 data/forge/tags/items/cooked_meats.json
 9b0be5399e772df94949f573bb6c8ffc5e4bbbb8 data/forge/tags/items/flour/wheat.json
+a2bd5e54165ce23d715c49ee1969331d943481db data/forge/tags/items/vegetables.json

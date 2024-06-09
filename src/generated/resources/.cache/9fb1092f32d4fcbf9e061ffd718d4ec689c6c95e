@@ -1,4 +1,4 @@
-// 1.20.4	2024-06-04T19:04:21.9781665	Recipes
+// 1.20.4	2024-06-09T10:13:23.0126023	Recipes
 177fd69b82e00047cd5c0f362ce0e4739607f20c data/gastronomyworks/advancements/recipes/food/cooking/baguette.json
 b65b3a50cadf6e263518fd2bf6f6497afdb230e7 data/gastronomyworks/advancements/recipes/food/cooking/baguette_from_smoking.json
 039f5b0a2e15c27eee28288042ae5ed2c82d8578 data/gastronomyworks/advancements/recipes/food/cooking/bread.json
@@ -13,7 +13,6 @@ ebff0446cdccddf846e048853f9a2427da6c4dc9 data/gastronomyworks/advancements/recip
 89f7225504b4f62df54f03182112e6fcf0d631e3 data/gastronomyworks/advancements/recipes/food/cooking/sourdough_breadroll.json
 4772f817279f23408007ea5e3a56c886b50969c4 data/gastronomyworks/advancements/recipes/food/cooking/sourdough_breadroll_from_smoking.json
 9bd386670ac054850e617da2cd4a794dfd1e2b23 data/gastronomyworks/advancements/recipes/food/cooking/sourdough_bread_from_smoking.json
-4d262f5d5635b0af1c97719a356d7575aeb987e7 data/gastronomyworks/advancements/recipes/food/test/stone_mold.json
 541adec6747a281d4c47acac78299e5e6f5c431e data/gastronomyworks/recipes/blueprint/mold_box.json
 9f75f9edb4baf110b99453940672daefedfbb2c8 data/gastronomyworks/recipes/bottling/baguette.json
 fb326a47203d56ad2b00720723b7cb945448a9ea data/gastronomyworks/recipes/bottling/bread.json
@@ -43,4 +42,4 @@ c3940388542c6e70e4131269fb93efb67045bfb3 data/gastronomyworks/recipes/mixer/doug
 f32d1a3e32461bdcac8ff2e838168864dbb7312f data/gastronomyworks/recipes/mixer/milkdough.json
 9341402636210fdbce844c6c95ecf90131f46db5 data/gastronomyworks/recipes/mixer/sourdough.json
 588939ae6b55bcefe7d5c5a9fccf649b37291eb0 data/gastronomyworks/recipes/mixer/sourdough_from_starter.json
-92c067874d92d3ccb8768d159584697269d0bd7d data/gastronomyworks/recipes/test/stone_mold.json
+3c7b920442f10f27b1cb40b6e16a8f2828ffea18 data/gastronomyworks/recipes/mixer/stew.json

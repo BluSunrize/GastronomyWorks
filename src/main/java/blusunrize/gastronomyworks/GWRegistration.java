@@ -119,12 +119,21 @@ public class GWRegistration
 		public static final FluidEntry SOURDOUGH = FluidEntry.make("sourdough", doughProperties());
 		public static final FluidEntry MILKDOUGH = FluidEntry.make("milkdough", doughProperties());
 		public static final FluidEntry CUSTARD = FluidEntry.make("custard", doughProperties());
+		public static final FluidEntry STEW = FluidEntry.make("stew", waterProperties());
 
 
 		private static void init(IEventBus modEventBus)
 		{
 			REGISTER.register(modEventBus);
 			TYPE_REGISTER.register(modEventBus);
+		}
+
+		private static FluidType.Properties waterProperties()
+		{
+			return FluidType.Properties.create()
+					.canSwim(false).canDrown(false)
+					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
+					.lightLevel(0);
 		}
 
 		private static FluidType.Properties doughProperties()
@@ -150,7 +159,7 @@ public class GWRegistration
 
 			private static FluidEntry make(String name, FluidType.Properties typeProperties)
 			{
-				return make("custard", rl("block/fluid/"+name), rl("block/fluid/"+name), typeProperties);
+				return make(name, rl("block/fluid/"+name), rl("block/fluid/"+name), typeProperties);
 			}
 
 			private static FluidEntry make(

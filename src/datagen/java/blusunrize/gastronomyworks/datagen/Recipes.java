@@ -98,6 +98,16 @@ public class Recipes extends RecipeProvider
 				.setEnergy(1200)
 				.build(consumer, rl("mixer/custard"));
 
+		MixerRecipeBuilder.builder()
+				.output(GWRegistration.Fluids.STEW.get(), FluidType.BUCKET_VOLUME)
+				.fluidInput(FluidTags.WATER, FluidType.BUCKET_VOLUME)
+				.input(GWTags.cookedMeats)
+				.input(GWTags.vegetables)
+				.input(GWTags.vegetables)
+				.input(GWTags.vegetables)
+				.setEnergy(1200)
+				.build(consumer, rl("mixer/stew"));
+
 		BottlingMachineRecipeBuilder.builder()
 				.output(GWRegistration.Items.BAGUETTE.raw())
 				.output(rodMold)
