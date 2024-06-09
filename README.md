@@ -1,4 +1,4 @@
-<img src="src/main/resources/assets/gastronomyworks/logo.png" width="100" height="100">
+<img src="src/main/resources/logo.png" width="100" height="100">
 
 # Gastronomy Works
 

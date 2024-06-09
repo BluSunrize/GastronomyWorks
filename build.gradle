@@ -16,7 +16,7 @@ repositories {
 }
 
 base {
-    archivesName = mod_name.replaceAll('\\s', '') // no spaces in file names
+    archivesName = mod_name.replaceAll('\\s', '') + "-" + minecraft_version // no spaces in file names
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
@@ -139,4 +139,20 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+task createReleaseCommit() {
+    doLast {
+        def commitMsg = "\"Release ${mod_version}\""
+        def tagName = "${mod_version}"
+        exec {
+            commandLine 'git', 'add', 'changelog.md', 'gradle.properties'
+        }
+        exec {
+            commandLine 'git', 'commit', '-m', commitMsg
+        }
+        exec {
+            commandLine 'git', 'tag', '-a', tagName, '-m', commitMsg
+        }
+    }
 }
